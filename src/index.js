@@ -14,9 +14,9 @@ import i18next from "i18next";
 import global_es from "./translations/es/global.json";
 import global_en from "./translations/en/global.json";
 
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
-// const redirectUri = process.env.REACT_APP_AUTH0_REDIRECTURI;
+const domain = "dev-lagswg4t7w0xx7lh.us.auth0.com";
+const clientId = "5p2U747U876xI9J0x1bY3iL2qd8qrwII";
+
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -40,7 +40,7 @@ ReactDOM.render(
             <Auth0Provider
               domain={domain}
               clientId={clientId}
-              redirectUri={window.location.origin}
+              redirect_uri={window.location.origin}
             >
               <App />
             </Auth0Provider>
